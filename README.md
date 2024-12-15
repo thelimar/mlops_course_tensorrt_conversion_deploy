@@ -9,7 +9,9 @@ After converting Roberta-base model in onnx we will measure its performance: flo
 
 ## PLAN conversion
 Then we convert .onnx to .plan via onnx2trt.sh in a TensorRT docker container.
+
 ![Offsets](https://github.com/thelimar/mlops_course_tensorrt_conversion_deploy/blob/main/Images/offsets.png)
+
 ## Triton server inference
 Then we can inference our model via Triton Inference Server (also in a docker container) and measure the mae between tensorRT and onnx model outputs.
 P.S. I tried using perf_analyzer from SDK, but it didn'd see the inference server fro some reason :(
